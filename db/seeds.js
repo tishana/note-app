@@ -4,9 +4,9 @@ const seeds = require('./seedData.json')
 const Note = require('../models/Note')
 mongoose.Promise = Promise
 
-Note.remove({})
+Note.deleteMany({})
     .then(() => {
-        return Note.collection.insert(seeds)
+        return Note.collection.bulkWrite(seeds)
     })
     .then(() => {
         process.exit()

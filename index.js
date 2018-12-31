@@ -13,7 +13,7 @@ app.use(parser.urlencoded({ extended: true }))
 app.use(parser.json())
 app.use(cors())
 
-app.use('/api/notes/', noteController)
+app.use('/api/notes', noteController)
 
 // app.get('api/notes', (req, res) => { // Notes API
 //     Note.find()

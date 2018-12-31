@@ -32,7 +32,7 @@ router.post('/', (req, res) => { //creating a note from form
 router.get('/:id', (req, res) => { //showing one note
     Note.findById(req.params.id)
         .then(note => {
-            res.json(order)
+            res.json(note)
         })
         .catch(err => {
             console.log(err)
