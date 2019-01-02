@@ -1,3 +1,4 @@
+const Backbone = require('backbone')
 //Model
 var Note = Backbone.Model.extend({
     defaults: {
@@ -14,17 +15,24 @@ var Note = Backbone.Model.extend({
 
 //Collection
 const NotesCollection = Backbone.Collection.extend({
-    model: Note
+    model: Note,
+    localStorage: new StorageEvent('notes')
 })
 
 
 
 //View
 const NoteView = Backbone.View.extend({ // one note
-    model = new Note(),
-    tagName = 'div',
+    model: new Note(),
+    tagName: 'div',
+    noteTpl: _.template('notes-one'),
     initialize: () => {
-        this.template = _.template($())
+
+    },
+    render: () => {
+        this.$el.html(this.noteTpl(this.model.attributes))
+        this.input = this.$('.edit')
+        return this
     }
 })
 
