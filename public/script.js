@@ -1,4 +1,4 @@
-const Backbone = require('backbone')
+// const Backbone = require('backbone')
 //Model
 var Note = Backbone.Model.extend({
     defaults: {
@@ -16,8 +16,10 @@ var Note = Backbone.Model.extend({
 //Collection
 const NotesCollection = Backbone.Collection.extend({
     model: Note,
-    localStorage: new StorageEvent('notes')
+    // localStorage: new StorageEvent('notes')
 })
+
+var notes = new NotesCollection()
 
 
 
@@ -25,33 +27,45 @@ const NotesCollection = Backbone.Collection.extend({
 const NoteView = Backbone.View.extend({ // one note
     model: new Note(),
     tagName: 'div',
-    noteTpl: _.template('notes-one'),
+    // noteTpl: _.template('notes-one'),
     initialize: () => {
-
+        this.template = _.template($('#note-one').html())
+    },
+    events: {
+        // 'click .new-note': 
     },
     render: () => {
-        this.$el.html(this.noteTpl(this.model.attributes))
+        this.$el.html(this.template(this.model.toJSON()))
         this.input = this.$('.edit')
         return this
     }
 })
+var oneNote = new NoteView()
+// console.log(noteView.el)
 
 const NotesView = Backbone.View.extend({ //all notes
-
+    model: notes,
+    el: $('#notes-all'),
+    initialize: () => {
+        this.model.on('add', this.render(), this)
+    },
+    render: () => {
+        var self = this
+        this.$el.html('')
+        _.each(this.model.toArray(), (note) => {
+            self.$el.append(new NoteView({ model: note })).render().$el
+        })
+        return this
+    }
 })
+var allNotes = new NotesView()
 
-var m = new Note({
-    title: "First Note",
-    text: "lorem Ipsum, blah blah blah..."
+$(document).ready(() => {
+    $('add-note').on('click', () => {
+        var note = new Note({
+            date: Date.now,
+            title: $('.title-input').val(),
+            text: $('.text-input').val()
+        })
+    })
 })
-
-console.log(m.toJSON())
-var notes = new NotesCollection(m)
-console.log('Collection size: ' + notes.length)
-var p = new Note({
-    title: 'Another One',
-    text: 'Normally, when creating a collection you’ll also want to define a property specifying the type of model that your collection will contain, along with any instance properties required.'
-})
-notes.push(p)
-console.log('Collection size: ' + notes.length)
-console.log(notes.toJSON())
