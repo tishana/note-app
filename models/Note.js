@@ -3,13 +3,10 @@ const Schema = mongoose.Schema
 
 //Note Model
 const Note = new Schema({
-    date: Date.now,
+    date: Date,
     title: String,
-    text: 'String',
-    userId: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
+    text: String
+
 })
 
 module.exports = mongoose.model('Note', Note)

@@ -2,7 +2,6 @@
 //Model
 var Note = Backbone.Model.extend({
     defaults: {
-        date: Date.now,
         title: " ",
         text: " "
     },
