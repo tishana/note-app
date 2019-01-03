@@ -4,10 +4,13 @@ const seeds = require('./seedData.json')
 const Note = require('../models/Note')
 mongoose.Promise = Promise
 
-Note.deleteMany({})
+Note.removeMany({})
     .then(() => {
-        return Note.collection.bulkWrite(seeds)
+        Note.collection.insertMany(seeds)
     })
-    .then(() => {
+    .then((seeds) => {
+        console.log(seeds)
         process.exit()
+    }).catch((err) => {
+        console.log(err)
     })
