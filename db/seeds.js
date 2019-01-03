@@ -7,10 +7,11 @@ mongoose.Promise = Promise
 Note.deleteMany({})
     .then(() => {
         Note.collection.insertMany(seeds)
+            .then((seeds) => {
+                console.log(seeds)
+                process.exit()
+            })
     })
-    .then((seeds) => {
-        console.log(seeds)
-        process.exit()
-    }).catch((err) => {
+    .catch((err) => {
         console.log(err)
     })
