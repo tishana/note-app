@@ -4,7 +4,7 @@ const seeds = require('./seedData.json')
 const Note = require('../models/Note')
 mongoose.Promise = Promise
 
-Note.removeMany({})
+Note.deleteMany({})
     .then(() => {
         Note.collection.insertMany(seeds)
     })
