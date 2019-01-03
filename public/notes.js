@@ -95,7 +95,27 @@
 //HTML stuff
 /* <h4>date</h4>
     <h3><input class="title-input"></h3>
-        <p><textarea name="text" class="text-input" cols="80" rows="10"></textarea></p> --></h3> */
+        <p><textarea name="text" class="text-input" cols="80" rows="10"></textarea></p> --></h3>
+ //Script template
+ <script type="text/template" id="note-one">
+    <% _.each( note, function (attr){ %>
+        <div class="note-one">
+        <h2><% attr.get("title") %></h2>
+        <h3><% attr.get("date") %></h3>
+        <p><% attr.get("text") %></p>
+        <button class="btn btn-info new-note">Show</button>
+        </div>
+    <% }); %>
+    </script>
+
+//main html stuff
+<!-- <div>
+        <h1>Notes</h1>
+        <div id="notes-list">
+        </div>
+        <button class="btn btn-success">New Note</button>
+    </div> -->
+        */
 
 
 //sample model, collection

@@ -25,21 +25,31 @@ const NotesCollection = Backbone.Collection.extend({
 
 //View
 var NoteView = Backbone.View.extend({
-    //<div class="note-one" id="unique"></div>
+    // //<div class="note-one" id="unique"></div>
     tagname: "div",
     className: "note-one",
     id: "unique",
     initialize: () => {
-        console.log(this.tagname)
-        // console.log($el)
-        // $(".note-one").append(this.el)
+        $("#notes").append("NOTE")
+    }
+
+})
+
+var TestView = Backbone.View.extend({
+    tagName: "div",
+    className: "prettycake",
+    id: "divman",
+    initialize: () => {
+        $("#notes").append("bang")
+    },
+    render: () => {
+        var template = _.template($("#note-one").html(), {})
+        this.$el.html(template)
     }
 })
 
 
-
-
-
 $(document).ready(() => {
-    var oneView = new NoteView()
+    var x = new TestView({ el: $("#notes") })
+    console.log(x)
 })
