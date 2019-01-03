@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 if (process.env.NODE_ENV == "production") {
-    mongoose.connect(process.env.MLAB_URL, { useNewUrlParser: true })
+    mongoose.connect(process.env.MLAB_URL, { useMongoClient: true })
 } else {
-    mongoose.connect("mongodb://localhost/note-app", { useNewUrlParser: true })
+    mongoose.connect("mongodb://localhost/note-app", { useCreateIndex: true, useNewUrlParser: true })
 }
 
 mongoose.Promise = Promise
