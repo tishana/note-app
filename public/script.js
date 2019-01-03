@@ -2,8 +2,8 @@
 //Model
 var Note = Backbone.Model.extend({
     defaults: {
-        title: " ",
-        text: " "
+        title: "Your Title",
+        text: "Your note text here..."
     },
     initialize: () => {
         console.log("Note model initialized...")
