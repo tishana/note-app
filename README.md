@@ -1,6 +1,8 @@
 # Note App API
 
- I created this API with sample data and RESTful routes for use with an external front-end application built with Backbone.js. My goal is to combine the two for a fullstack application.  
+ I created this API with sample data and RESTful routes for use with an external front-end application built with Backbone.js. My goal is to combine the two for a fullstack application.
+
+ You can access the deployed API [here](https://jot-tt.herokuapp.com/api/notes) .  
 
 --------------------------------------------
 ## User Stories
@@ -52,11 +54,20 @@ $ node seeds.js
 
 You're all set to run Note App API on your machine. You will see notes on the main page. You can delete these, and create your own. Have fun with it... 
 
+--------------------------------------------
+## Challenges During this Project
+My original goal for Note App API was to make this a fullstack application with a front end portion in Backbone.js. I've never worked with Backbone.js and this  proved to be a huge hurdle. 
+
+In the end, all front end frameworks intend to do the same thing, display your data. However, learning THIS framework took some serious brain gymnastics, and I lost a lot of valuable time due to a trivial mistake: BACKBONE IS NOT ES6 COMPATIBLE!
+
+After figuring this out, I had to start all over because I was constantly scrapping what I thought was bad code. 
+
+This experience has taught me a lot about learning on my own. I wasn't able to get any instructor assistance due to the nature of this project, but I feel more prepared for the job market and confident that I can teach myself anything.
 
 --------------------------------------------
 ## Future Plans for Note App API:
 
-My original goal for Note App API was to make this a fullstack application with a front end portion in Backbone.js. This proved to be a huge hurdle 
+
 
 Another goal is to use this API for other separate front end applications, as it is now, but with full CRUD capabilities regardless of the front end application.
 
