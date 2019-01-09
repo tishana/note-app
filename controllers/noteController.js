@@ -57,7 +57,8 @@ router.put('/:id', (req, res) => { //updating a note from the form
 router.delete('/:id', (req, res) => { //deleting a note
     Note.findOneAndDelete({ _id: req.params.id })
         .then(() => {
-            console.log("deleted")
+            return "deleted note"
+            // console.log("deleted")
         })
         .catch(err => {
             console.log(err)
