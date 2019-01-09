@@ -19,8 +19,8 @@ router.get('/', (req, res) => { //show all notes
 
 router.post('/', (req, res) => { //creating a note from form
     Note.create({
-        date: date.now(),
         title: req.body.title,
+        date: Date.now(),
         text: req.body.text
     }).then(note => {
         res.json(note)
@@ -55,8 +55,10 @@ router.put('/:id', (req, res) => { //updating a note from the form
 })
 
 router.delete('/:id', (req, res) => { //deleting a note
-    Note.findOneAndRemove({ _id: req.params.id })
-        .then(() => { })
+    Note.findOneAndDelete({ _id: req.params.id })
+        .then(() => {
+            console.log("deleted")
+        })
         .catch(err => {
             console.log(err)
         })
