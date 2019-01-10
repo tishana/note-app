@@ -13,9 +13,7 @@ router.get('/', (req, res) => { //show all notes
         })
 })
 
-// router.get('/new', (req, res) => { //rendering the form to create a new note
-//     res.render('note/new')
-// })
+
 
 router.post('/', (req, res) => { //creating a note from form
     Note.create({
@@ -39,12 +37,6 @@ router.get('/:id', (req, res) => { //showing one note
         })
 })
 
-// router.get('/:id/edit', (req, res) => { //rendering the form to edit a note
-//     Note.findOne({ _id: req.params.id })
-//         .then(note => {
-//             res.render('/notes/edit', note)
-//         })
-// })
 
 router.put('/:id', (req, res) => { //updating a note from the form
     Note.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
