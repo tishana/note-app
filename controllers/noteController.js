@@ -16,9 +16,11 @@ router.get('/', (req, res) => { //show all notes
 
 
 router.post('/', (req, res) => { //creating a note from form
+    let x = new Date()
+    let newDate = x.toDateString('en-US')
     Note.create({
         title: req.body.title,
-        date: Date.now(),
+        date: newDate,
         text: req.body.text
     }).then(note => {
         res.json(note)
