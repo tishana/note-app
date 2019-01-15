@@ -20,11 +20,6 @@
         "text": "Danish sesame snaps powder croissant gingerbread chocolate bar. Carrot cake biscuit icing sesame snaps dragée tiramisu chocolate halvah macaroon. Carrot cake dragée cake cake. from http://www.cupcakeipsum.com"
     },
     {
-        "date": "Fri Jan 11 2019",
-        "title": "Bring a gift",
-        "text": "We've been invited to Mara's birthday party. We should bring a gift. I know she loves stemware."
-    },
-    {
         "date": "Thu Jan 10 2019",
         "title": "Bake a cake",
         "text": "We need a cake, chocolate, to celebrate my graduation. It has to be chocolate. I would love a couple of layers. Be sure it's chocolate. Did I mention it needs to be chocolate? Like seriously, whatever is created, add more chocolate!"
@@ -33,5 +28,10 @@
         "date": "Thu Jan 10 2019",
         "title": "Finish Outcomes HW",
         "text": "Send the following to Outcomes ASAP: 1. Completed resume(PDF Google docs link) 2. Completed cover letter. 3. Links to my updated portfolio, updated LinkedIn, and GA Pages."
+    },
+    {
+        "date": "Fri Jan 11 2019",
+        "title": "Bring a gift",
+        "text": "We've been invited to Mara's birthday party. We should bring a gift. I know she loves stemware."
     }
 ]
