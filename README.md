@@ -2,7 +2,7 @@
 
  I created this API with sample data and RESTful routes for use with an external front-end application. My goal is to combine the two for a fullstack application.
 
- You can access the deployed API [here](https://jot-tt.herokuapp.com/api/notes) .  
+ You can access the deployed API [here](https://jot-tt.herokuapp.com/api/notes) . Please bear in mind that it may take a few moments to load the data because it is deployed to Heroku and may be hibernating.
 
 --------------------------------------------
 ## User Stories
@@ -58,15 +58,12 @@ You're all set to run Note App API on your machine. You will see notes on the ma
 --------------------------------------------
 ## Challenges During this Project
 
-My original goal for Note App API was to make this a fullstack application with a front end portion in Backbone.js. I've never worked with Backbone.js and this  proved to be a huge hurdle. 
+My original goal for Note App API was to make this a fullstack application. Since I would like to teach myself other frontend applications, I decided to keep the frontend and backend separate, using the backend as an API for any frontend.
 
-In the end, all front end frameworks intend to do the same thing, display your data. However, learning THIS framework took some serious brain gymnastics, and I lost a lot of valuable time due to a trivial mistake: BACKBONE IS NOT ES6 COMPATIBLE!
-
-After figuring this out, I had to start all over because I was constantly scrapping what I thought was bad code.
+I decided to use Node, Express, and Mongoose because I was already familiar with them. I like the ease of use in creating RESTful routes with Express. I also like the ease of creating simple data models with Mongoose, and I want to explore creating more complex models.
 
 I decided to build a frontend application with React, which you can view [here](https://github.com/tishana/jot-app).
 
-This experience has taught me a lot about learning on my own. I wasn't able to get any instructor assistance due to the nature of this project, but I feel more  confident that I can teach myself anything.
 
 --------------------------------------------
 ## Future Plans for Note App API:
