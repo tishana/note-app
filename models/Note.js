@@ -2,7 +2,7 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 mongoose.set('strictQuery', true)
 
-//Note Model
+//Note Model - remember to change to add correct date format
 const Note = new Schema({
     date: String,
     title: String,
