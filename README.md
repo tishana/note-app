@@ -20,8 +20,7 @@
 * Node.js
 * Express.js
 * Mongoose and MongoDB
-* MLab
-* Heroku
+* Heroku (in the past)
 
 
 --------------------------------------------
@@ -29,19 +28,19 @@
 
 * Fork and clone this repository to your machine
 * Change into the new directory
-* Run npm install:
+* In your IDEs terminal, run npm install:
 
 ```
 $ npm install
 
 ```
-* Open another terminal tab, and run Mongod
+<!-- * Open another terminal tab, and run Mongod
 
 ```
 $ mongod
 
-```
-* Open yet another terminal tab, and run nodemon
+``` -->
+* Open another terminal tab, and run nodemon
 ```
 $ nodemon
 
