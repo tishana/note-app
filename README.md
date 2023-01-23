@@ -46,12 +46,9 @@ $ mongod
 $ nodemon
 
 ```
-* In your first terminal tab, seed the database:
-```
-$ node seeds.js
+* Next, seed the database by opening the browser and navigating to http://localhost:3001/seed 
 
-```
-* Lastly, open a browser window, and navigate to http://localhost:3001
+* Lastly, once you see "done!" navigate to http://localhost:3001/notes
 
 You're all set to run Note App API on your machine. You will see notes on the main page. You can delete these, and create your own either in the JSON file (then reseeding your database with node seeds.js) or using any front end framework. Have fun with it... 
 
