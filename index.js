@@ -1,12 +1,15 @@
 const express = require('express')
-const router = express.Router()
 const parser = require('body-parser')
+const mongoose = require('mongoose')
+require('dotenv').config()
 const cors = require('cors')
-// const passport = require('passport')// for user auth in the future
+const db = mongoose.connection
 
 const noteController = require('./controllers/noteController')
-
+//Enviironmental Variables
 const app = express()
+const mongoURI = process.env.MONGODB_URI
+const port = process.env.PORT || 3001
 
 app.use(parser.urlencoded({ extended: true }))
 
@@ -17,8 +20,8 @@ app.use('/api/notes', noteController)
 
 app.set('port', process.env.PORT || 3001)
 
-app.listen(app.get('port'), () => {
-    console.log(`✅ PORT: ${app.get('port')} 🌟`)
+app.listen(PORT, () => {
+    console.log(`✅ Alive and kicking on ${PORT}  🌟`)
 })
 
 
