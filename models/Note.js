@@ -1,5 +1,6 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
+mongoose.set('strictQuery', true)
 
 //Note Model
 const Note = new Schema({
