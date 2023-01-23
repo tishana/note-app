@@ -2,7 +2,7 @@
 
  I created this API with sample data and RESTful routes for use with an external front-end application. My goal is to combine the two for a fullstack application.
 
- You can access the deployed API [here](https://jot-tt.herokuapp.com/api/notes) . Please bear in mind that it may take a few moments to load the data because it is deployed to Heroku and may be hibernating.
+ <!-- You can access the deployed API [here](https://jot-tt.herokuapp.com/api/notes) . Please bear in mind that it may take a few moments to load the data because it is deployed to Heroku and may be hibernating. -->
 
 --------------------------------------------
 ## User Stories
